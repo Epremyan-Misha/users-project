@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+body{
+  background-color: whitesmoke;
+}
+.divForUsers{
+  cursor: pointer;
+  display: flex;
+  margin-top: 200px;
+  gap: 20px;
+  margin-left: 15px;
+}
+.imgUsers{
+  width: 150px;
+  height: 150px;
+}
+.users{
+  border: solid 1px;
+  width: 220px;
+  padding: 10px;
+  height: 220px;
+  border-radius: 20px;
+}
+.divForAlbums:hover{
+  background-color: white ;
+}
+.usersDiv{
+  transition: 1s;
+  background-color: white;
+}
+.usersDiv:hover{
+ background-color: #ccc;
+}
+.infoDiv{
+  transition: 0.7s;
+}
+.infoDiv:hover{
+  background-color: white;
+  width: 900px;
+  height: 670px;
+}
+.postInfo{
+  transition: 0.7s;
+}
+.postInfo:hover{
+    background-color: white;
+    height: 250px;
+}
+.postBtn,.albumsBtn{
+  transition: 1s;
+}
+.postsBtn:hover,.albumsBtn:hover{
+  width: 150px;
+  height: 80px;
+}
+.modalDiv{
+  width: 800px;
+  height: 500px;
+}
