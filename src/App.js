@@ -6,12 +6,13 @@ import {
   useNavigate,
 } from "react-router-dom";
 import User from "./User";
-import "./App.css";
 import Posts from "./Posts";
 import Albums from "./Albums";
-const UsersList = () => {
+import Users from "./Users";
+import "./App.css";
+
+function App() {
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -20,49 +21,9 @@ const UsersList = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "20px",
-        marginLeft: "15px",
-        marginTop: "200px",
-        cursor: "pointer",
-      }}
-    >
-      {users.map((user) => (
-        <div
-          className="usersDiv"
-          key={user.id}
-          onClick={() => navigate(`/user/${user.id}`)}
-          style={{
-            cursor: "pointer",
-            marginBottom: "10px",
-            border: "solid 1px",
-            borderRadius: "20px",
-            width: "220px",
-            height: "260px",
-            padding: "10px",
-          }}
-        >
-          <img
-            style={{
-              width: "150px",
-              height: "150px",
-            }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpve8QCCPBiCCxagjx5ei3qUSB_7UyDEepfg&s"
-          />
-          <h2>{user.name}</h2>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-function App() {
-  return (
     <Router>
       <Routes>
-        <Route path="/" element={<UsersList />} />
+        <Route path="/" element={<Users users={users} />} />
         <Route path="/user/:id" element={<User />} />
         <Route path="/user/:id/posts" element={<Posts />} />
         <Route path="/user/:id/albums" element={<Albums />} />

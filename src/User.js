@@ -16,25 +16,10 @@ const User = () => {
   if (!user) return <div>Loading...</div>;
 
   return (
-    <div
-      className="infoDiv"
-      style={{
-        marginLeft: "500px",
-        marginTop: "200px",
-        border: "solid 1px",
-        borderRadius: "25px",
-        width: "800px",
-        height: "480px",
-      }}
-    >
+    <div className="infoDiv">
       <div style={{ display: "flex" }}>
         <img
-          style={{
-            width: "200px",
-            height: "200px",
-            marginTop: "25px",
-            marginLeft: "50px",
-          }}
+          className="photoUsers"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpve8QCCPBiCCxagjx5ei3qUSB_7UyDEepfg&s"
         />
         <div
