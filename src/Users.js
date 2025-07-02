@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./App.css";
 const Users = ({ users }) => {
   const navigate = useNavigate();
-
   const renderUsers = () => {
     const userElements = [];
     for (let i = 0; i < users.length; i++) {

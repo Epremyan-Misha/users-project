@@ -6,7 +6,6 @@ const User = () => {
   const { id } = useParams();
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => res.json())

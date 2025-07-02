@@ -35,8 +35,6 @@ const Posts = () => {
     setSelectedPost(null);
     setComments([]);
   };
-
-  // Ստեղծում ենք ֆունկցիա posts-ի ցուցադրության համար FOR ցիկլով
   const renderPosts = () => {
     const postItems = [];
     for (let i = 0; i < posts.length; i++) {
